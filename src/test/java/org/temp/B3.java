@@ -31,7 +31,7 @@ public class B3 {
 					double n = icell.getNumericCellValue();
 					long g = (long)n;
 					String valueOf = String.valueOf(g);
-					System.out.println();
+					System.out.println(valueOf);
 				}
 			}
 		}
