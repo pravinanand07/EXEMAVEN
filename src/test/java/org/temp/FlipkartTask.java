@@ -22,7 +22,7 @@ public class FlipkartTask {
 				"C:\\Users\\Praveen\\eclipse-workspace\\SRYA\\Seleny\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/");
-		driver.findElement(By.xpath("//button[@class='_2AkmmA _29YdH8']")).click();
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
 		driver.findElement(By.name("q")).sendKeys("redmi mobiles" + Keys.ENTER);
 		Thread.sleep(3000);
 		List<WebElement> ele = driver.findElements(By.xpath("//div[@class='_3wU53n']"));
@@ -32,6 +32,7 @@ public class FlipkartTask {
 		for (int i = 0; i <ele.size(); i++) {
 			WebElement ele1 = ele.get(i);
 			String text = ele1.getText();
+			System.out.println(text);
 			Row row = cs.createRow(i);
 			Cell cell = row.createCell(0);
 			cell.setCellValue(text);
